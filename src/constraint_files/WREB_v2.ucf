@@ -1,0 +1,322 @@
+#### Timing constraints ####
+NET "PgpRefClk_P" TNM_NET = "PgpRefClk_P";
+NET "PgpRefClk_M" TNM_NET = "PgpRefClk_M";
+TIMESPEC TS_PgpRefClk_P = PERIOD "PgpRefClk_P"  250 MHz LOW 50%;
+TIMESPEC TS_PgpRefClk_M = PERIOD "PgpRefClk_M"  250 MHz LOW 50%;
+
+NET "clk_100_Mhz" TNM_NET = "clk_100_Mhz";
+TIMESPEC TS_clk_100_Mhz = PERIOD "clk_100_Mhz"  10 ns LOW 50%;
+
+#### Pin assig ####
+## pgp reference clock
+NET "PgpRefClk_P" LOC = "F6" | IOSTANDARD = "LVDS_25" | TNM_NET = PgpRefClk_P; 
+NET "PgpRefClk_M" LOC = "F5" | IOSTANDARD = "LVDS_25" | TNM_NET = PgpRefClk_M;  
+
+
+
+## PGP serial com lines (Bank 116)
+NET "PgpRx_p" LOC = "E4" | IOSTANDARD = "LVDS"; 
+NET "PgpRx_m" LOC = "E3" | IOSTANDARD = "LVDS";
+NET "PgpTx_p" LOC = "D2" | IOSTANDARD = "LVDS";
+NET "PgpTx_m" LOC = "D1" | IOSTANDARD = "LVDS";
+
+
+#CCD ADC (Bank 13)
+NET "adc_data_ccd_1(0)"			LOC = "K26" | IOSTANDARD = "LVCMOS33";
+NET "adc_data_ccd_1(1)"			LOC = "P26" | IOSTANDARD = "LVCMOS33";
+NET "adc_data_ccd_1(2)"			LOC = "L25" | IOSTANDARD = "LVCMOS33";
+NET "adc_data_ccd_1(3)"			LOC = "N24" | IOSTANDARD = "LVCMOS33";
+NET "adc_data_ccd_1(4)"			LOC = "M26" | IOSTANDARD = "LVCMOS33";
+NET "adc_data_ccd_1(5)"			LOC = "P25" | IOSTANDARD = "LVCMOS33";
+NET "adc_data_ccd_1(6)"			LOC = "M20" | IOSTANDARD = "LVCMOS33";
+NET "adc_data_ccd_1(7)"			LOC = "L24" | IOSTANDARD = "LVCMOS33";
+NET "adc_data_ccd_1(8)"			LOC = "R26" | IOSTANDARD = "LVCMOS33";
+NET "adc_data_ccd_1(9)"			LOC = "M25" | IOSTANDARD = "LVCMOS33";
+NET "adc_data_ccd_1(10)"		LOC = "P24" | IOSTANDARD = "LVCMOS33";
+NET "adc_data_ccd_1(11)"		LOC = "N26" | IOSTANDARD = "LVCMOS33";
+NET "adc_data_ccd_1(12)"		LOC = "R25" | IOSTANDARD = "LVCMOS33";
+NET "adc_data_ccd_1(13)"		LOC = "N19" | IOSTANDARD = "LVCMOS33";
+NET "adc_data_ccd_1(14)"		LOC = "M24" | IOSTANDARD = "LVCMOS33";
+NET "adc_data_ccd_1(15)"		LOC = "P19" | IOSTANDARD = "LVCMOS33";
+NET "adc_cnv_ccd_1"			LOC = "N16" | IOSTANDARD = "LVCMOS33";
+NET "adc_sck_ccd_1"			LOC = "K25" | IOSTANDARD = "LVCMOS33";
+
+#(Bank 16)
+NET "adc_buff_pd"					LOC = "N22" | IOSTANDARD = "LVCMOS33";
+
+#ASPIC signals (Bank 32)
+NET "ASPIC_r_up_ccd_1_p"		LOC = "Y15"  | IOSTANDARD = "LVDS";
+NET "ASPIC_r_up_ccd_1_n"		LOC = "Y16"  | IOSTANDARD = "LVDS";
+NET "ASPIC_r_down_ccd_1_p"		LOC = "AB14" | IOSTANDARD = "LVDS";
+NET "ASPIC_r_down_ccd_1_n"		LOC = "AB15" | IOSTANDARD = "LVDS";
+NET "ASPIC_clamp_ccd_1_p"		LOC = "AC19" | IOSTANDARD = "LVDS";
+NET "ASPIC_clamp_ccd_1_n"		LOC = "AD19" | IOSTANDARD = "LVDS";
+NET "ASPIC_reset_ccd_1_p"		LOC = "AA17" | IOSTANDARD = "LVDS";
+NET "ASPIC_reset_ccd_1_n"		LOC = "AA18" | IOSTANDARD = "LVDS";
+
+#CCD Clocks signals (Bank 32)
+NET "par_clk_ccd_1_p(0)"		LOC = "AC14" | IOSTANDARD = "LVDS";
+NET "par_clk_ccd_1_n(0)"		LOC = "AD14" | IOSTANDARD = "LVDS";
+NET "par_clk_ccd_1_p(1)"		LOC = "AA14" | IOSTANDARD = "LVDS";
+NET "par_clk_ccd_1_n(1)"		LOC = "AA15" | IOSTANDARD = "LVDS";
+NET "par_clk_ccd_1_p(2)"		LOC = "AD16" | IOSTANDARD = "LVDS";
+NET "par_clk_ccd_1_n(2)"		LOC = "AE16" | IOSTANDARD = "LVDS";
+NET "par_clk_ccd_1_p(3)"		LOC = "AF19" | IOSTANDARD = "LVDS";
+NET "par_clk_ccd_1_n(3)"		LOC = "AF20" | IOSTANDARD = "LVDS";
+
+NET "ser_clk_ccd_1_p(0)"		LOC = "AD15" | IOSTANDARD = "LVDS";
+NET "ser_clk_ccd_1_n(0)"		LOC = "AE15" | IOSTANDARD = "LVDS";
+NET "ser_clk_ccd_1_p(1)"		LOC = "AE18" | IOSTANDARD = "LVDS";
+NET "ser_clk_ccd_1_n(1)"		LOC = "AF18" | IOSTANDARD = "LVDS";
+NET "ser_clk_ccd_1_p(2)"		LOC = "AF14" | IOSTANDARD = "LVDS";
+NET "ser_clk_ccd_1_n(2)"		LOC = "AF15" | IOSTANDARD = "LVDS";
+NET "reset_gate_ccd_1_p" 		LOC = "AE17" | IOSTANDARD = "LVDS";
+NET "reset_gate_ccd_1_n"		LOC = "AF17" | IOSTANDARD = "LVDS";
+
+# ASICs SPI control signals
+# common signals (Bank 13)
+NET "asic_spi_mosi" 		LOC = "M22" | IOSTANDARD = "LVCMOS33";
+#aspic_spi_clk is assigned on r_add(7)
+NET "asic_spi_sclk" 		LOC = "U16" | IOSTANDARD = "LVCMOS33";
+NET "asic_spi_miso_t" 		LOC = "M21" | IOSTANDARD = "LVCMOS33";
+NET "asic_spi_miso_b" 		LOC = "P20" | IOSTANDARD = "LVCMOS33";
+#ASPIC signals  (Bank 13)
+NET "ASPIC_ss_t_ccd_1" 	LOC = "T25" | IOSTANDARD = "LVCMOS33";
+NET "ASPIC_ss_b_ccd_1" 	LOC = "T20" | IOSTANDARD = "LVCMOS33";
+NET "ASPIC_spi_reset"  	LOC = "T24" | IOSTANDARD = "LVCMOS33";
+NET "ASPIC_nap_ccd_1"	LOC = "R22" | IOSTANDARD = "LVCMOS33";
+
+#(Bank32)
+#NET "ASPIC_time_ccd_1_p"		LOC = "AA19" | IOSTANDARD = "LVDS";
+#NET "ASPIC_time_ccd_1_n"		LOC = "AA20" | IOSTANDARD = "LVDS";
+
+#(Bank15)
+#pins inverted to cerrect an error on the board
+#NET "backbias_clamp"			LOC = "J19" | IOSTANDARD = "LVCMOS33";
+#NET "backbias_ssbe" 			LOC = "L19" | IOSTANDARD = "LVCMOS33";
+
+NET "backbias_clamp"			LOC = "L19" | IOSTANDARD = "LVCMOS33";
+NET "backbias_ssbe" 			LOC = "J19" | IOSTANDARD = "LVCMOS33";
+
+#(Bank32)
+NET "pulse_ccd_1_p"		LOC = "AB17" | IOSTANDARD = "LVDS";
+NET "pulse_ccd_1_n"		LOC = "AC17" | IOSTANDARD = "LVDS";
+
+# DREB V & I sensors (Bank 14)
+NET "LTC2945_SCL"			LOC = "G24" | IOSTANDARD = "LVCMOS33";
+NET "LTC2945_SDA"			LOC = "F24" | IOSTANDARD = "LVCMOS33";
+
+#Temperature probes
+# dreb temp sens (Bank 14)
+NET "DREB_temp_sda"					LOC = "G26" | IOSTANDARD = "LVCMOS33";
+NET "DREB_temp_scl"					LOC = "G25" | IOSTANDARD = "LVCMOS33";
+
+##CCD temperatures (Bank 14)
+NET "csb_24ADC"		LOC = "B26" | IOSTANDARD = "LVCMOS33";
+NET "sclk_24ADC"		LOC = "A23" | IOSTANDARD = "LVCMOS33";
+NET "din_24ADC"		LOC = "A24" | IOSTANDARD = "LVCMOS33";
+NET "dout_24ADC"		LOC = "D26" | IOSTANDARD = "LVCMOS33";
+
+# slow ADC and mux for ASICs temperature (Bank 16)
+NET "Tmux_ena_ccd_1" 			LOC = "E12" | IOSTANDARD = "LVCMOS33";
+NET "Tmux_a0_ccd_1" 				LOC = "A13" | IOSTANDARD = "LVCMOS33";
+NET "Tmux_a1_ccd_1" 				LOC = "A12" | IOSTANDARD = "LVCMOS33";
+#(Bank 13)
+NET "Temp_adc_scl_ccd_1"		LOC = "R20" | IOSTANDARD = "LVCMOS33";
+NET "Temp_adc_sda_ccd_1"		LOC = "T22" | IOSTANDARD = "LVCMOS33";
+
+##### DAC ####
+##cabac clock rails DAC (Bank 14)
+NET "ldac_RAILS"			LOC = "E21" | IOSTANDARD = "LVCMOS33";
+NET "din_RAILS"			LOC = "E22" | IOSTANDARD = "LVCMOS33";
+NET "sclk_RAILS"			LOC = "B21" | IOSTANDARD = "LVCMOS33";
+NET "sync_RAILS_dac0"	LOC = "C21" | IOSTANDARD = "LVCMOS33";
+NET "sync_RAILS_dac1"	LOC = "D23" | IOSTANDARD = "LVCMOS33";
+
+##CCD current source
+NET "ldac_CSGATE"		LOC = "D21" | IOSTANDARD = "LVCMOS33";
+NET "din_CSGATE"		LOC = "C22" | IOSTANDARD = "LVCMOS33";
+NET "sync_CSGATE"		LOC = "B20" | IOSTANDARD = "LVCMOS33";
+NET "sclk_CSGATE"		LOC = "A20" | IOSTANDARD = "LVCMOS33";
+
+NET "ldac_C_BIAS"		LOC = "J25" | IOSTANDARD = "LVCMOS33";
+NET "din_C_BIAS"		LOC = "J23" | IOSTANDARD = "LVCMOS33";
+NET "sync_C_BIAS"		LOC = "L23" | IOSTANDARD = "LVCMOS33";
+NET "sclk_C_BIAS"		LOC = "K23" | IOSTANDARD = "LVCMOS33";
+
+#####High speed ADCs ####
+##ADC for MUX0 (Bank 12)
+
+#NET "d_mux0(0)"			LOC = "U22" | IOSTANDARD = "LVCMOS18";
+#NET "d_mux0(1)"			LOC = "V22" | IOSTANDARD = "LVCMOS18";
+#NET "d_mux0(2)"			LOC = "U24" | IOSTANDARD = "LVCMOS18";
+#NET "d_mux0(3)"			LOC = "U25" | IOSTANDARD = "LVCMOS18";
+#NET "d_mux0(4)"			LOC = "V23" | IOSTANDARD = "LVCMOS18";
+#NET "d_mux0(5)"			LOC = "V24" | IOSTANDARD = "LVCMOS18";
+#NET "d_mux0(6)"			LOC = "U26" | IOSTANDARD = "LVCMOS18";
+#NET "d_mux0(7)"			LOC = "V26" | IOSTANDARD = "LVCMOS18";
+#NET "d_mux0(8)"			LOC = "W25" | IOSTANDARD = "LVCMOS18";
+#NET "d_mux0(9)"			LOC = "W26" | IOSTANDARD = "LVCMOS18";
+#NET "d_mux0(10)"			LOC = "V21" | IOSTANDARD = "LVCMOS18";
+#NET "d_mux0(11)"			LOC = "W21" | IOSTANDARD = "LVCMOS18";
+##NET "or_mux0"				LOC = "W23" | IOSTANDARD = "LVCMOS18";
+#NET "dco_mux0"				LOC = "AA25" | IOSTANDARD = "LVCMOS18";
+#NET "dco_mux0" CLOCK_DEDICATED_ROUTE = FALSE;
+
+#ADC for MUX1 (Bank 12)
+
+#NET "d_mux1(0)"			LOC = "AB26" 	| IOSTANDARD = "LVCMOS18";
+#NET "d_mux1(1)"			LOC = "AC26" 	| IOSTANDARD = "LVCMOS18";
+#NET "d_mux1(2)"			LOC = "Y25" 	| IOSTANDARD = "LVCMOS18";
+#NET "d_mux1(3)"			LOC = "Y26" 	| IOSTANDARD = "LVCMOS18";
+#NET "d_mux1(4)"			LOC = "AA23" 	| IOSTANDARD = "LVCMOS18";
+#NET "d_mux1(5)"			LOC = "AB24" 	| IOSTANDARD = "LVCMOS18";
+#NET "d_mux1(6)"			LOC = "Y23" 	| IOSTANDARD = "LVCMOS18";
+#NET "d_mux1(7)"			LOC = "AA24" 	| IOSTANDARD = "LVCMOS18";
+#NET "d_mux1(8)"			LOC = "Y22" 	| IOSTANDARD = "LVCMOS18";
+#NET "d_mux1(9)"			LOC = "AA22" 	| IOSTANDARD = "LVCMOS18";
+#NET "d_mux1(10)"			LOC = "AC23" 	| IOSTANDARD = "LVCMOS18";
+#NET "d_mux1(11)"			LOC = "AC24" 	| IOSTANDARD = "LVCMOS18";
+##NET "or_mux1"				LOC = "Y21" 	| IOSTANDARD = "LVCMOS18";
+#NET "dco_mux1"				LOC = "W20" 	| IOSTANDARD = "LVCMOS18";
+#NET "dco_mux1" CLOCK_DEDICATED_ROUTE = FALSE;
+
+### max 11056 bias slow adc
+NET "bs_adc_EOC"              	LOC = "AE23" 	| IOSTANDARD = "LVCMOS18";
+
+NET "bs_adc_data_from_adc_dcr(0)" 	LOC = "AE21" 	| IOSTANDARD = "LVCMOS18";
+NET "bs_adc_data_from_adc_dcr(1)" 	LOC = "AD21" 	| IOSTANDARD = "LVCMOS18";
+NET "bs_adc_data_from_adc_dcr(2)" 	LOC = "AC21" 	| IOSTANDARD = "LVCMOS18";
+NET "bs_adc_data_from_adc_dcr(3)" 	LOC = "AB21" 	| IOSTANDARD = "LVCMOS18";
+
+NET "bs_adc_data_from_adc(4)" 	LOC = "AC22" 	| IOSTANDARD = "LVCMOS18";
+NET "bs_adc_data_from_adc(5)" 	LOC = "AB22" 	| IOSTANDARD = "LVCMOS18";
+NET "bs_adc_data_from_adc(6)" 	LOC = "AD24" 	| IOSTANDARD = "LVCMOS18";
+NET "bs_adc_data_from_adc(7)" 	LOC = "AD23" 	| IOSTANDARD = "LVCMOS18";
+NET "bs_adc_data_from_adc(8)" 	LOC = "Y21" 	| IOSTANDARD = "LVCMOS18";
+NET "bs_adc_data_from_adc(9)" 	LOC = "W20" 	| IOSTANDARD = "LVCMOS18";
+NET "bs_adc_data_from_adc(10)" 	LOC = "AC24" 	| IOSTANDARD = "LVCMOS18";
+NET "bs_adc_data_from_adc(11)" 	LOC = "AC23" 	| IOSTANDARD = "LVCMOS18";
+NET "bs_adc_data_from_adc(12)" 	LOC = "AA22" 	| IOSTANDARD = "LVCMOS18";
+NET "bs_adc_data_from_adc(13)" 	LOC = "Y22" 	| IOSTANDARD = "LVCMOS18";
+NET "bs_adc_data_from_adc(14)" 	LOC = "AA24" 	| IOSTANDARD = "LVCMOS18";
+NET "bs_adc_data_from_adc(15)" 	LOC = "Y23" 	| IOSTANDARD = "LVCMOS18";
+
+NET "bs_adc_CS"                 LOC = "AF25" 	| IOSTANDARD = "LVCMOS18";
+NET "bs_adc_RD"                 LOC = "AD26" 	| IOSTANDARD = "LVCMOS18";
+NET "bs_adc_WR"                 LOC = "AF24" 	| IOSTANDARD = "LVCMOS18";
+NET "bs_adc_CONVST"             LOC = "AE26" 	| IOSTANDARD = "LVCMOS18";
+NET "bs_adc_SHDN"               LOC = "AF23" 	| IOSTANDARD = "LVCMOS18";
+
+
+# max 11056 bias slow adc (Bank 12)
+NET "ck_adc_EOC"		LOC = "Y26" 	| IOSTANDARD = "LVCMOS18";
+NET "ck_adc_data_from_adc_dcr(0)" 	LOC = "W23" 	| IOSTANDARD = "LVCMOS18";
+NET "ck_adc_data_from_adc_dcr(1)" 	LOC = "AB25" 	| IOSTANDARD = "LVCMOS18";
+NET "ck_adc_data_from_adc_dcr(2)" 	LOC = "AA25" 	| IOSTANDARD = "LVCMOS18";
+NET "ck_adc_data_from_adc_dcr(3)" 	LOC = "W21" 	| IOSTANDARD = "LVCMOS18";
+
+
+NET "ck_adc_data_from_adc(4)" 	LOC = "V21" 	| IOSTANDARD = "LVCMOS18";
+NET "ck_adc_data_from_adc(5)" 	LOC = "W26" 	| IOSTANDARD = "LVCMOS18";
+NET "ck_adc_data_from_adc(6)" 	LOC = "W25" 	| IOSTANDARD = "LVCMOS18";
+NET "ck_adc_data_from_adc(7)" 	LOC = "V26" 	| IOSTANDARD = "LVCMOS18";
+NET "ck_adc_data_from_adc(8)" 	LOC = "U26" 	| IOSTANDARD = "LVCMOS18";
+NET "ck_adc_data_from_adc(9)" 	LOC = "V24" 	| IOSTANDARD = "LVCMOS18";
+NET "ck_adc_data_from_adc(10)" 	LOC = "V23" 	| IOSTANDARD = "LVCMOS18";
+NET "ck_adc_data_from_adc(11)" 	LOC = "U25" 	| IOSTANDARD = "LVCMOS18";
+NET "ck_adc_data_from_adc(12)" 	LOC = "U24" 	| IOSTANDARD = "LVCMOS18";
+NET "ck_adc_data_from_adc(13)" 	LOC = "V22" 	| IOSTANDARD = "LVCMOS18";
+NET "ck_adc_data_from_adc(14)" 	LOC = "U22" 	| IOSTANDARD = "LVCMOS18";
+NET "ck_adc_data_from_adc(15)" 	LOC = "U21" 	| IOSTANDARD = "LVCMOS18";
+
+NET "ck_adc_CS" 		LOC = "AB26" 	| IOSTANDARD = "LVCMOS18";
+NET "ck_adc_RD" 		LOC = "AC26" 	| IOSTANDARD = "LVCMOS18";
+NET "ck_adc_WR" 		LOC = "W24" 	| IOSTANDARD = "LVCMOS18";
+NET "ck_adc_CONVST" 		LOC = "Y25" 	| IOSTANDARD = "LVCMOS18";
+NET "ck_adc_SHDN" 		LOC = "AA23" 	| IOSTANDARD = "LVCMOS18";
+
+
+
+#common signals
+#NET "cs_l_mux"				LOC = "AC21" 	| IOSTANDARD = "LVCMOS18";
+#NET "pd_adc_mux"				LOC = "AD21" 	| IOSTANDARD = "LVCMOS18";
+#NET "sclk_mux"				LOC = "AD24" 	| IOSTANDARD = "LVCMOS18";
+#NET "sdio_mux"				LOC = "AB22" 	| IOSTANDARD = "LVCMOS18";
+
+#differential clock for high speed ADC (Bank 23)
+#NET "clk_mux_p"			LOC = "V11" | IOSTANDARD = "LVDS";
+#NET "clk_mux_n"			LOC = "W11" | IOSTANDARD = "LVDS";
+
+
+
+### misc signals ###
+
+#Resistors to define board address (Bank 13)
+NET "r_add(0)"			LOC = "R16" | IOSTANDARD = "LVCMOS33" | PULLUP;
+NET "r_add(1)"			LOC = "R17" | IOSTANDARD = "LVCMOS33" | PULLUP;
+NET "r_add(2)"			LOC = "N18" | IOSTANDARD = "LVCMOS33" | PULLUP;
+NET "r_add(3)"			LOC = "M19" | IOSTANDARD = "LVCMOS33" | PULLUP;
+NET "r_add(4)"			LOC = "T17" | IOSTANDARD = "LVCMOS33" | PULLUP;
+NET "r_add(5)"			LOC = "R18" | IOSTANDARD = "LVCMOS33" | PULLUP;
+NET "r_add(6)"			LOC = "P18" | IOSTANDARD = "LVCMOS33" | PULLUP;
+#NET "r_add(7)"			LOC = "U16" | IOSTANDARD = "LVCMOS33" | PULLUP; r_add(7) is disabled because the pin is assigned to asic_sclk
+#(Bank 14)
+NET "TEST(0)"				LOC = "H21" | IOSTANDARD = "LVCMOS33";
+NET "TEST(1)"				LOC = "G21" | IOSTANDARD = "LVCMOS33";
+NET "TEST(2)"				LOC = "H23" | IOSTANDARD = "LVCMOS33";
+NET "TEST(3)"				LOC = "H24" | IOSTANDARD = "LVCMOS33";
+#NET "TEST(4)"				LOC = "J21" | IOSTANDARD = "LVCMOS33";
+#NET "TEST(5)"				LOC = "H22" | IOSTANDARD = "LVCMOS33";
+#NET "TEST(6)"				LOC = "J24" | IOSTANDARD = "LVCMOS33";
+#NET "TEST(7)"				LOC = "J25" | IOSTANDARD = "LVCMOS33";
+#NET "TEST(8)"				LOC = "L22" | IOSTANDARD = "LVCMOS33";
+#NET "TEST(9)"				LOC = "E23" | IOSTANDARD = "LVCMOS33";
+#NET "TEST(10)"				LOC = "E25" | IOSTANDARD = "LVCMOS33";
+#NET "TEST(11)"				LOC = "D25" | IOSTANDARD = "LVCMOS33";
+#NET "TEST(12)"				LOC = "H26" | IOSTANDARD = "LVCMOS33";
+
+#Led (Bank 13)
+NET "TEST_LED(0)"			LOC = "T23" | IOSTANDARD = "LVCMOS33";		
+NET "TEST_LED(1)"			LOC = "U19" | IOSTANDARD = "LVCMOS33";
+NET "TEST_LED(2)"			LOC = "U20" | IOSTANDARD = "LVCMOS33";
+NET "TEST_LED(3)"			LOC = "T18" | IOSTANDARD = "LVCMOS33";
+NET "TEST_LED(4)"			LOC = "T19" | IOSTANDARD = "LVCMOS33";
+NET "TEST_LED(5)"			LOC = "P16" | IOSTANDARD = "LVCMOS33";
+
+# Power on reset (Bank 16)
+NET "Pwron_Rst_L"		LOC = "N21" | IOSTANDARD = "LVCMOS33";
+
+# sync for power supply (Bank 15)
+NET "PWR_SYNC"			LOC = "M16" | IOSTANDARD = "LVCMOS33";	
+
+# CCD clocks enable (Bank 32)
+NET "ccd_clk_en_out_p" LOC = "Y17" | IOSTANDARD = "LVDS";
+NET "ccd_clk_en_out_n" LOC = "Y18" | IOSTANDARD = "LVDS";
+
+#ASPIC reference enable (Bank 14)
+NET "ASPIC_ref_sd" LOC = "D24" | IOSTANDARD = "LVCMOS33";
+
+#ASPIC 5V enable 
+NET "ASPIC_5V_sd" LOC = "E23" | IOSTANDARD = "LVCMOS33";
+
+#REB serial number (Bank 16)
+NET "reb_sn_onewire"	LOC = "N23" | IOSTANDARD = "LVCMOS33";
+
+# GPIOs
+NET "gpio_0_p"     LOC = "V16" | IOSTANDARD = "LVDS";  
+NET "gpio_0_n"     LOC = "V17" | IOSTANDARD = "LVDS";  
+NET "gpio_0_dir"   LOC = "AD25" | IOSTANDARD = "LVCMOS18";  
+
+NET "gpio_1_p"     LOC = "W18" | IOSTANDARD = "LVDS";  
+NET "gpio_1_n"     LOC = "W19" | IOSTANDARD = "LVDS";  
+NET "gpio_1_dir"   LOC = "AE25" | IOSTANDARD = "LVCMOS18";  
+
+
+# jitter study signals
+#NET "pll_recov_clk_p"		LOC = "AB16" | IOSTANDARD = "LVDS_25";
+#NET "pll_recov_clk_n"		LOC = "AC16" | IOSTANDARD = "LVDS_25";
+
+#NET "recov_clk_p"				LOC = "AD20" | IOSTANDARD = "LVDS_25";
+#NET "recov_clk_n"				LOC = "AE20" | IOSTANDARD = "LVDS_25";
+

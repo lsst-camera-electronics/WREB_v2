@@ -1,0 +1,74 @@
+INFO:sim:172 - Generating IP...
+Applying current project options...
+Finished applying current project options.
+WARNING:sim - A core named 'fast_adc_fifo' already exists in the project. Output
+   products for this core may be overwritten.
+Resolving generics for 'fast_adc_fifo'...
+WARNING:sim - A core named 'fast_adc_fifo' already exists in the project. Output
+   products for this core may be overwritten.
+Applying external generics to 'fast_adc_fifo'...
+Delivering associated files for 'fast_adc_fifo'...
+Delivering EJava files for 'fast_adc_fifo'...
+Generating implementation netlist for 'fast_adc_fifo'...
+INFO:sim - Pre-processing HDL files for 'fast_adc_fifo'...
+WARNING:sim - BlackBox generator run option '-ifmt' found multiple times. Only
+   the first occurence is considered.
+Running synthesis for 'fast_adc_fifo'
+Running ngcbuild...
+Writing VHO instantiation template for 'fast_adc_fifo'...
+Writing VHDL behavioral simulation model for 'fast_adc_fifo'...
+WARNING:sim - Overwriting existing file
+   /home/srusso/Xilinx_prj/LSST_prj/test_ad9628_dual_fast_adc/src/xil_cores/tmp/
+   _cg/fast_adc_fifo/doc/fifo_generator_v9_3_vinfo.html with file from view
+   xilinx_documentation
+Delivered 3 files into directory
+/home/srusso/Xilinx_prj/LSST_prj/test_ad9628_dual_fast_adc/src/xil_cores/tmp/_cg
+/fast_adc_fifo
+Delivered 1 file into directory
+/home/srusso/Xilinx_prj/LSST_prj/test_ad9628_dual_fast_adc/src/xil_cores/tmp/_cg
+/fast_adc_fifo
+Generating ASY schematic symbol...
+INFO:sim:949 - Finished generation of ASY schematic symbol.
+Generating SYM schematic symbol for 'fast_adc_fifo'...
+Generating metadata file...
+Regenerating ISE project file for 'fast_adc_fifo'...
+Generating ISE project...
+XCO file found: fast_adc_fifo.xco
+XMDF file found: fast_adc_fifo_xmdf.tcl
+Adding
+/home/srusso/Xilinx_prj/LSST_prj/test_ad9628_dual_fast_adc/src/xil_cores/tmp/_cg
+/fast_adc_fifo.asy -view all -origin_type imported
+Adding
+/home/srusso/Xilinx_prj/LSST_prj/test_ad9628_dual_fast_adc/src/xil_cores/tmp/_cg
+/fast_adc_fifo.ngc -view all -origin_type created
+Checking file
+"/home/srusso/Xilinx_prj/LSST_prj/test_ad9628_dual_fast_adc/src/xil_cores/tmp/_c
+g/fast_adc_fifo.ngc" for project device match ...
+File
+"/home/srusso/Xilinx_prj/LSST_prj/test_ad9628_dual_fast_adc/src/xil_cores/tmp/_c
+g/fast_adc_fifo.ngc" device information matches project device.
+Adding
+/home/srusso/Xilinx_prj/LSST_prj/test_ad9628_dual_fast_adc/src/xil_cores/tmp/_cg
+/fast_adc_fifo.sym -view all -origin_type imported
+Adding
+/home/srusso/Xilinx_prj/LSST_prj/test_ad9628_dual_fast_adc/src/xil_cores/tmp/_cg
+/fast_adc_fifo.vhd -view all -origin_type created
+INFO:HDLCompiler:1061 - Parsing VHDL file
+   "/home/srusso/Xilinx_prj/LSST_prj/test_ad9628_dual_fast_adc/src/xil_cores/tmp
+   /_cg/fast_adc_fifo.vhd" into library work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding
+/home/srusso/Xilinx_prj/LSST_prj/test_ad9628_dual_fast_adc/src/xil_cores/tmp/_cg
+/fast_adc_fifo.vho -view all -origin_type imported
+INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
+   Please set the new top explicitly by running the "project set top" command.
+   To re-calculate the new top automatically, set the "Auto Implementation Top"
+   property to true.
+Top level has been set to "/fast_adc_fifo"
+Generating README file...
+Generating FLIST file...
+INFO:sim:948 - Finished FLIST file generation.
+Launching README viewer...
+Moving files to output directory...
+Finished moving files to output directory
+Wrote CGP file for project 'fast_adc_fifo'.

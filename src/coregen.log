@@ -1,0 +1,49 @@
+INFO:sim:172 - Generating IP...
+Applying current project options...
+Finished applying current project options.
+WARNING:sim - A core named 'dcm_base' already exists in the project. Output
+   products for this core may be overwritten.
+Resolving generics for 'dcm_base'...
+WARNING:sim - A core named 'dcm_base' already exists in the project. Output
+   products for this core may be overwritten.
+Applying external generics to 'dcm_base'...
+Delivering associated files for 'dcm_base'...
+WARNING:sim - Component clk_wiz_v3_6 does not have a valid model name for VHDL
+   synthesis
+Delivering EJava files for 'dcm_base'...
+Delivered 3 files into directory
+/u1/srusso/Xilinx_prj/LSST_prj/DREB_prj/WREB_v2/src/tmp/_cg/dcm_base
+Delivered 1 file into directory
+/u1/srusso/Xilinx_prj/LSST_prj/DREB_prj/WREB_v2/src/tmp/_cg/dcm_base
+Generating ASY schematic symbol...
+Loading device for application Rf_Device from file '7k160t.nph' in environment
+/afs/slac.stanford.edu/g/reseng/vol15/Xilinx/14.7/ISE_DS/ISE/.
+INFO:sim:949 - Finished generation of ASY schematic symbol.
+Generating SYM schematic symbol for 'dcm_base'...
+Generating ISE project...
+XCO file found: dcm_base.xco
+XMDF file found: dcm_base_xmdf.tcl
+Adding /u1/srusso/Xilinx_prj/LSST_prj/DREB_prj/WREB_v2/src/tmp/_cg/dcm_base.asy
+-view all -origin_type imported
+Adding /u1/srusso/Xilinx_prj/LSST_prj/DREB_prj/WREB_v2/src/tmp/_cg/dcm_base.ucf
+-view all -origin_type created
+Adding /u1/srusso/Xilinx_prj/LSST_prj/DREB_prj/WREB_v2/src/tmp/_cg/dcm_base.vhd
+-view all -origin_type created
+INFO:HDLCompiler:1061 - Parsing VHDL file
+   "/u1/srusso/Xilinx_prj/LSST_prj/DREB_prj/WREB_v2/src/tmp/_cg/dcm_base.vhd"
+   into library work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding /u1/srusso/Xilinx_prj/LSST_prj/DREB_prj/WREB_v2/src/tmp/_cg/dcm_base.vho
+-view all -origin_type imported
+INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
+   Please set the new top explicitly by running the "project set top" command.
+   To re-calculate the new top automatically, set the "Auto Implementation Top"
+   property to true.
+Top level has been set to "/dcm_base"
+Generating README file...
+Generating FLIST file...
+INFO:sim:948 - Finished FLIST file generation.
+Launching README viewer...
+Moving files to output directory...
+Finished moving files to output directory
+Wrote CGP file for project 'dcm_base'.
